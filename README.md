@@ -1,24 +1,7 @@
-# README
+# Blog Application (for Ruby on Rails level-up)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Notes
+- [Ruby Notes](/ruby_notes.md)
+- [Rails Notes](/rails_notes.md)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**See Commit History for specific lessons**
