@@ -235,6 +235,10 @@ a = *(1..3) # => [1, 2, 3]
   end
   ```
 - Avoid the use of attr. Use `attr_reader` and `attr_accessor` instead.
+- `@` - instance variable
+- `@@` - class variable
+- `self.var` - referes to the the instance variable for the current instance
+  - [What's the diference](https://medium.com/@sgg2123/vs-self-in-ruby-1d4d88170#targetText=The%20keyword%20self%20in%20Ruby,is%20receiving%20the%20current%20message.&targetText=Using%20self%20inside%20an%20instance,and%20instance%20and%20class%20respectively.)
 
 #### 
 
