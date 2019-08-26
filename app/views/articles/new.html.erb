@@ -1,0 +1,19 @@
+<h1>Create Article</h1>
+
+<%= form_with scope: :article, url: articles_path, local: true do |f| %>
+  <div>
+    <%= f.label :title %>
+  </div>
+  <div>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :text %>
+  </div>
+  <div>
+    <%= f.text_area :text %>
+  </div>
+  <div>
+    <%= f.submit "Submit", disable_with: 'Submiting...' %>
+  </div>
+<% end %>
