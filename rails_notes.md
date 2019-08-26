@@ -41,9 +41,15 @@ https://guides.rubyonrails.org/getting_started.html
 <% end %>
 ```
 
-#### 
+#### Models
+> You don't have to declare attributes inside Rails models, as that will be done automatically by **Active Record**.
+> NB: Models generate migration files
 
-#### 
+- `rails generate model Article title:string text:text`
+
+#### Migrations
+- `rails db:migrate`
+- `rails db:migrate RAILS_ENV=production` # specifying environments
 
 #### 
 
