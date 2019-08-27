@@ -1,29 +1,5 @@
-<h1>Create Article</h1>
-
-<div>
-  <% if @article.errors.any? %>
-    <ul>
-      <%= @article.errors.full_messages.each do |error| %>
-        <li><%= error %></li>
-      <% end %>
-    </ul>
-  <% end %>
-</div>
-
-<%= form_with scope: :article, url: articles_path, local: true do |f| %>
-  <div>
-    <%= f.label :title %>
-  </div>
-  <div>
-    <%= f.text_field :title %>
-  </div>
-  <div>
-    <%= f.label :text %>
-  </div>
-  <div>
-    <%= f.text_area :text %>
-  </div>
-  <div>
-    <%= f.submit "Submit", disable_with: 'Submiting...' %>
-  </div>
-<% end %>
+<h1>New article</h1>
+ 
+<%= render 'form' %>
+ 
+<%= link_to 'Back', articles_path %>
