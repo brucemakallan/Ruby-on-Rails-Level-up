@@ -64,6 +64,7 @@ https://guides.rubyonrails.org/getting_started.html
 
 #### Migrations
 - `rails db:migrate`
+- `rake db:rollback` # rollback
 - `rails db:migrate RAILS_ENV=production` # specifying environments
 
 #### Troubleshooting
