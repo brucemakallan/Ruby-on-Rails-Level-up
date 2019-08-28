@@ -71,6 +71,8 @@ https://guides.rubyonrails.org/getting_started.html
 - Stopping a rails server process when `Ctr+C` fails
   `lsof -wni tcp:3000`
   `kill -9 <PID>`
+- Fixing `rails c`
+  `gem 'rb-readline', '~> 0.5.3'` to development group
 
 #### 
 

@@ -163,6 +163,9 @@ end
   x.nil?
   x.zero? # But x == 0 is also OK
   ```
+- Safe navigation `&.` e.g use
+  `if user&.valid_password?(params[:password])` instead of 
+  `if user && user.valid_password?(params[:password])`
 
 #### Loops
 - Do not use `for`, unless you know exactly why. Use `each`: https://rubystyle.guide/#no-for-loops
