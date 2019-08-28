@@ -112,6 +112,20 @@ https://www.rubyguides.com/2018/10/puts-vs-print/
 #### Files
 - snake_case
 
+#### Case When
+```
+case
+when song.name == 'Misty'
+  puts 'Not again!'
+when song.duration > 120
+  puts 'Too long!'
+when Time.now.hour > 21
+  puts "It's too late"
+else
+  song.play
+end
+```
+
 #### Conditional statements
 - Don’t use parentheses around the condition of a control expression.
 - `some_condition && do_something` (as in JS)
