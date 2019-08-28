@@ -235,6 +235,9 @@ a = *(1..3) # => [1, 2, 3]
   end
   ```
 - Avoid the use of attr. Use `attr_reader` and `attr_accessor` instead.
+- `attr_reader` automatically generates a getter method for each given attribute.
+- `attr_writer` automatically generates a setter method for each given attribute.
+- `attr_accessor` automatically generates a getter **and** setter.
 - `@` - instance variable
 - `@@` - class variable
 - `self.var` - referes to the the instance variable for the current instance
@@ -245,4 +248,21 @@ a = *(1..3) # => [1, 2, 3]
 - Specify version to avoid backward compatibility issues when it's upgraded
 - `bundle install`
 
-#### 
+#### Modules
+> Use modules if you're not going to need an instance
+e.g For ErrorHandling
+```
+module ErrorHandler
+  def self.included(including_class)
+    including_class.class_eval do
+      rescue_from ActiveRecord::RecordNotFound do |e|
+        respond('Not Found', e, :not_found)
+      end
+    end
+  end
+
+  def respond(message, error, error_code)
+    render json: { error: message, details: error }, status: error_code
+  end
+end
+```

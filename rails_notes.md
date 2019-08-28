@@ -11,9 +11,24 @@ https://guides.rubyonrails.org/getting_started.html
 3. Install Rails `gem install rails`
 4. Create new app `rails new <app>`
 5. Start the server `rails s`
+6. Rails console `rails c`
+
+#### Linting
+- Rubocop
+  - `.rubocop.yml` for config 
+  - `rubocop --auto-gen-config` # For auto config
+
+#### Advanced setup
+- `rails new <app> -d postgresql -B -T`
+  - `-B` skip bundle install (to be done later)
+  - `-T` skip tests
+- `rails new authors-haven --api --no-sprockets -d postgresql`
+  - `--api` api only
+  - `--no-sprockets` remove web assets
 
 #### Controllers
-- `rails generate controller Welcome index` # Controller Welcome with action index
+- `rails generate controller Welcome index` # Controller Welcome with action index. Use `rais g ... ` shortcut
+- `rails g controller api/v1/articles` # with api versioning
 
 #### Resources
 > A resource is the term used for a collection of similar objects, such as articles, people, or animals.  Can do CURD operations on them.
@@ -51,7 +66,10 @@ https://guides.rubyonrails.org/getting_started.html
 - `rails db:migrate`
 - `rails db:migrate RAILS_ENV=production` # specifying environments
 
-#### 
+#### Troubleshooting
+- Stopping a rails server process when `Ctr+C` fails
+  `lsof -wni tcp:3000`
+  `kill -9 <PID>`
 
 #### 
 
