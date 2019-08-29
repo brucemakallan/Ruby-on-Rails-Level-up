@@ -74,7 +74,25 @@ https://guides.rubyonrails.org/getting_started.html
 - Fixing `rails c`
   `gem 'rb-readline', '~> 0.5.3'` to development group
 
-#### 
+#### References / Relationships (with foreign keys)
+> A User / Author has many Articles
+1. Article model
+   `belongs_to :author, class_name: "User", foreign_key: "user_id"`
+2. User model
+   `has_many :articles, class_name: "Article", foreign_key: "author_id"`
+3. Migration
+   > Migration below is adding **author** and **slug** columns to Articles
+   ```
+    class AddSlugAndAuthorToArticles < ActiveRecord::Migration[6.0]
+      def change
+        add_column :articles, :slug, :string
+        add_index :articles, :slug, unique: true
+        add_reference :articles, :author, index: true, foreign_key: { to_table: :users }
+      end
+    end
+   ```
+4. ArticlesController
+   `article = user.articles.build(article_params)`
 
 #### 
 
